@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration:none;
+    &::selection{
+        background-color: #000;
+        color: #fff; 
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #cebd96; 
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #cebd96; 
+    }
+}
+/***************************** Global Style *****************************/
+a{
+    color: #000;
+    transition: all .3s ease-in-out;
+    &:hover{
+        color:#000;
+        text-decoration:none
+    }
+    &:focus{
+       outline:0
+    }
+}
+ul{
+    list-style-type:none;
+    padding: 0;
+}
+button:active,
+button:active:focus,
+button:active:hover,
+button:focus,
+button:hover,
+button:not(:disabled):not(.disabled).active,
+button:not(:disabled):not(.disabled):active {
+    transition: all .3s ease;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+form{
+    .form-control{
+        &:focus{
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
+.scroll-top-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background:#cebd96;
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+    &:hover {
+        background-color: #cebd96;
+        color: #fff;
+    }
+}
+//navbar-toggler
+    .navbar-toggler{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        position: relative;
+        &.active{
+            .navbar-toggler-icon {
+                box-shadow: 0px 0px 0px grey;
+                background: rgba(0, 0, 0, 0);
+                background: #fff;
+                &::before {
+                    top: 0px !important;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    top: 0px !important;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+        .navbar-toggler-icon
+        {
+            width: 15px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+            &::after,
+            &::before
+            {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 2px;
+                background: #000;
+                transition: 0.5s;
+            }
+            &::after{
+                top: -5px;
+                right: 0px;
+            }
+            &::before{
+                top: 5px;
+                right: 0px;
+            }
+        }
+    }
+/*start section nav top*/
+.nav-top{
+    background-color: #000c20;
+    border-bottom: 1px solid #2d2d2d;
+    .info{
+        display: flex;
+        a{
+            h6{
+                color: #7b8693; 
+            }
+        }
+    }
+}
+/*end section nav top*/
